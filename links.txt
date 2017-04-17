@@ -1,0 +1,11 @@
+https://learn.adafruit.com/neopixels-on-raspberry-pi/wiring
+
+https://joshondesign.com/2013/10/23/noderpi
+
+
+https://www.npmjs.com/package/rpi-ws281x-native
+https://www.npmjs.com/package/rpi-ws281x-canvas
+https://github.com/Automattic/node-canvas
+
+
+https://github.com/beyondscreen/node-openpixelcontrol
