@@ -1,12 +1,14 @@
 var ws281x = require('rpi-ws281x-native'),
     canvas = require('rpi-ws281x-canvas').create(12,12),
-    ctx = canvas.getContext('2d');
+    ctx = canvas.getContext('2d'),
+	time = require('time'),
+	date = require('date-and-time');
 
 
 ws281x.init(144);
 ws281x.setIndexMapping(ws281x.indexMapping.alternatingMatrix(12,12));
-
-
+	
+		var now = new time.Date();
         var text = "";
         var textDirection ="";
          
@@ -14,7 +16,7 @@ ws281x.setIndexMapping(ws281x.indexMapping.alternatingMatrix(12,12));
 
 		textDirection ="left";
 		textXpos = 0;
-		text = "aus aus aus!!";    
+		//text = date.format(now, 'HH:mm:ss');    
 
 //http://jsfiddle.net/bS79G/644/
 function animate() {
@@ -22,7 +24,9 @@ function animate() {
     ctx.globalAlpha = 1;
     //ctx.fillStyle = "#FFF";
     //ctx.fillRect(0, 0, 12, 12);
-
+	
+	now = new time.Date();
+	text = date.format(now, 'HH:mm:ss');   
     var metrics = ctx.measureText(text);
     var textWidth = metrics.width;
 
@@ -38,11 +42,11 @@ function animate() {
     }
 
 	ctx.font = '10px Sans Mono';
-	ctx.fillStyle = "#000";		  
+	ctx.fillStyle = "#F00";		  
 	ctx.textBaseline = 'top';
 	ctx.fillText  ( text, textXpos, 0);  
 	ws281x.render(canvas.toUint32Array());			
-  }   
+  }  
 
 function getRndColor() {
     var r = 255*Math.random()|0,
