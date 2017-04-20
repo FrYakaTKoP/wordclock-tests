@@ -1,0 +1,43 @@
+
+Wordclock conceptional feature list:
+
+	Clock/Display profiles:
+		- display time in wordclock fashion (using the hw letters)
+		- display temperatures
+			- small Dallas oneWire sensor for indoor temp
+			- use inet weather service for Outdoor temp
+			- may use RF interface to gather outdoor temp measured by RF sensors (433 or 868)
+		- display scrollingtext
+			- display time and date 
+			- webif print message 
+			- rss? or similar 
+		- ?minigame? =) (but would need kind of control interface ~ps3 bt / usb nes / hw btns)
+		
+	Web Frontend Features:
+		- time	
+			- set clock manually
+			- regional settings (tz/dst)
+			- change how the (system)time gets synched (need to investigate more) 
+		- Wifi
+			- join existing network 
+			- config AP if standalone (security, since first boot ap will not have any)
+			- misc network config 
+		- Display
+			- change led color + brightness
+				- change color of every segment/element
+				- random option
+				- color wheel?
+			- display profiles
+				- en-/disable
+				- order
+				- profile time
+				- profile config
+				
+	Misc Features:
+		- hw buttons
+			- reset / activate unprotected AP
+			- quick select profiles
+			- ?minigame hw buttons?
+		- battery backed RTC (in case inet is down or not available on boot, will reset to 1970 otherwise)
+		- light sensor for automatic dimming?
+		
