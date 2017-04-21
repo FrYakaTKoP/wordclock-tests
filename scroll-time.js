@@ -12,11 +12,12 @@ ws281x.setIndexMapping(ws281x.indexMapping.alternatingMatrix(12,12));
         var text = "";
         var textDirection ="";
          
-		setInterval(animate, 20);
 
 		textDirection ="left";
 		textXpos = 0;
-		//text = date.format(now, 'HH:mm:ss');    
+		//text = date.format(now, 'HH:mm:ss');   
+		
+		setInterval(animate, 20); 
 
 //http://jsfiddle.net/bS79G/644/
 function animate() {
