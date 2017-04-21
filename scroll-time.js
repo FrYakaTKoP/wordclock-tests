@@ -45,6 +45,7 @@ function animate() {
 	ctx.fillStyle = "#F00";		  
 	ctx.textBaseline = 'top';
 	ctx.fillText  ( text, textXpos, 0);  
+	
 	ws281x.render(canvas.toUint32Array());			
   }  
 
