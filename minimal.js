@@ -11,7 +11,7 @@ ws281x.setIndexMapping(ws281x.indexMapping.alternatingMatrix(12,12));
 setInterval(function() {
     ctx.globalAlpha = 1;
     ctx.fillStyle = '#' + rndi(0xffffff).toString(16);
-    ctx.fillRect(12, 12, 12, 12);
+    ctx.fillRect(rndi(10)-2, rndi(10)-2, rndi(10), rndi(10));
 
     ws281x.render(canvas.toUint32Array());
 }, 100);
