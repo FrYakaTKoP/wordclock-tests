@@ -7,7 +7,7 @@ var pixelData = new Uint32Array(NUM_LEDS)
 var staticLeds = [[13,14],  [16,19]] // äs, isch 
 var minutesLeds = [[29,32], [39,41], [14,20], [23,28], [34,37]] // foif, zäh, viertel, zwänzg, halbi
 var modLeds = [[44,45], [46,48]] // vor,ab 
-var hoursLeds = [[109, 111], [73,76], [77,80], [85,89], [56,60], [97,102], [91,96], [103,107], [112,115], [116,120], [81,84], [121,126]] // eis, zwei, drüh, vieri,foifi,sächsi,siebni,achti,nüni,zähni,elfi,zwölfi
+var hoursLeds = [[109, 111], [73,76], [77,80], [85,89], [55,59], [97,102], [91,96], [103,107], [112,115], [116,120], [81,84], [121,126]] // eis, zwei, drüh, vieri,foifi,sächsi,siebni,achti,nüni,zähni,elfi,zwölfi
 	
 	
 var now = new time.Date();
