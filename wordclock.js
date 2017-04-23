@@ -2,11 +2,48 @@ var ws281x = require('rpi-ws281x-native'),
 	time = require('time');
 	
 var NUM_LEDS = 136;
-	
-var staticLeds = [[23,24],  [18,21]] // äs, isch 
-var minutesLeds = [[13,16], [25,27], [28,34], [43,48], [49,53]] // foif, zäh, viertel, zwänzg, halbi
-var modLeds = [[37,39], [40,41]] // vor,ab 
-var hoursLeds = [[118, 120], [73,76], [77,80], [92,96], [55,59], [97,102], [85,90], [103,107], [114,117], [109,113], [81,84], [121,126]] // eis, zwei, drüh, vieri,foifi,sächsi,siebni,achti,nüni,zähni,elfi,zwölfi
+
+//äs, isch, 
+var staticLeds = [[23,24],  [18,21]];
+
+// foif, zäh, viertel, zwänzg, halbi, vor, ab 
+var miscLeds = [[13,16], [25,27], [28,34], [43,48], [49,53],[37,39], [40,41]]: 
+
+// eis, zwei, drüh, vieri,foifi,sächsi,siebni,achti,nüni,zähni,elfi,zwölfi
+var hourLeds = [[118, 120], [73,76], [77,80], [92,96], [55,59], [97,102], [85,90], [103,107], [114,117], [109,113], [81,84], [121,126]]: 
+
+
+// 
+var minuteSegments = {};
+minuteSegments['5'] =  [0,6]; // foif ab
+minuteSegments['10'] =  [1,6]; // zäh ab
+minuteSegments['15'] =  [2,6]; // viertel ab
+minuteSegments['20'] =  [3,6]; // zwäng ab
+minuteSegments['25'] =  [0,4,5]; // foif vor halbi
+minuteSegments['30'] =  [4]; // halbi
+minuteSegments['35'] =  [0,4,6]; // foif ab halbi
+minuteSegments['40'] =  [3,5]; // zwäng vor
+minuteSegments['45'] =  [2,5]; // viertel vor 
+minuteSegments['50'] =  [1,5]; // zäh vor
+minuteSegments['55'] =  [0,5]; // foif vor
+
+// define change to next hour
+var changeNextHrs = "25"
+
+// TBD not working
+// need find a way to feed all leds to array now there one the begin and there end
+// take from associative array and push full list of led to new associative array with same name
+
+// build minute segments led list
+var minuteSegmentsLeds = [];
+for (i = 0; i < minuteSegments.length; i++)
+{
+
+ 
+}
+
+// single pixels 
+var minuteLeds = [133,134,135,136];
 	
 	
 var now = new time.Date();
@@ -45,17 +82,17 @@ function parseTime(time) {
   // Must be a better way to do this than persistent if-elses.
   // Correspond minute to appropriate word
   if (minute == 5 || minute == 55) {
-    currentWords.push(minutesLeds[0])
+    currentWords.push(5minLeds[0])
   } else if (minute == 10 || minute == 50) {
-    currentWords.push(minutesLeds[1])
+    currentWords.push(5minLeds[1])
   } else if (minute == 15 || minute == 45) {
-    currentWords.push(minutesLeds[2])
+    currentWords.push(5minLeds[2])
   } else if (minute == 20 || minute == 40) {
-    currentWords.push(minutesLeds[3])
+    currentWords.push(5minLeds[3])
   } else if (minute == 25 || minute == 35) {
-    currentWords.push(minutesLeds[3], minutesLeds[0])
+    currentWords.push(5minLeds[3], 5minLeds[0])
   } else if (minute == 30) {
-    currentWords.push(minutesLeds[4])
+    currentWords.push(5minLeds[4])
   }
 
   // We need to parse the hour too. Tedious.
