@@ -11,7 +11,8 @@ https://github.com/Automattic/node-canvas
 https://www.npmjs.com/package/time
 https://www.npmjs.com/package/date-and-time
 
-http://www.linuxcircle.com/2013/12/30/run-nodejs-server-on-boot-with-forever-on-raspberry-pi/
-
+https://github.com/zapty/forever-service
 
 https://github.com/beyondscreen/node-openpixelcontrol
+
+https://github.com/Kaph/piwordclock/blob/master/wordclock.js
