@@ -3,125 +3,124 @@ var ws281x = require('rpi-ws281x-native'),
 	
 var NUM_LEDS = 136;
 
-//äs, isch, 
-var staticLeds = [[23,24],  [18,21]];
-
-// foif, zäh, viertel, zwänzg, halbi, vor, ab 
-var miscLeds = [[13,16], [25,27], [28,34], [43,48], [49,53],[37,39], [40,41]]: 
-
-// eis, zwei, drüh, vieri,foifi,sächsi,siebni,achti,nüni,zähni,elfi,zwölfi
-var hourLeds = [[118, 120], [73,76], [77,80], [92,96], [55,59], [97,102], [85,90], [103,107], [114,117], [109,113], [81,84], [121,126]]: 
 
 
-// 
-var minuteSegments = {};
-minuteSegments['5'] =  [0,6]; // foif ab
-minuteSegments['10'] =  [1,6]; // zäh ab
-minuteSegments['15'] =  [2,6]; // viertel ab
-minuteSegments['20'] =  [3,6]; // zwäng ab
-minuteSegments['25'] =  [0,4,5]; // foif vor halbi
-minuteSegments['30'] =  [4]; // halbi
-minuteSegments['35'] =  [0,4,6]; // foif ab halbi
-minuteSegments['40'] =  [3,5]; // zwäng vor
-minuteSegments['45'] =  [2,5]; // viertel vor 
-minuteSegments['50'] =  [1,5]; // zäh vor
-minuteSegments['55'] =  [0,5]; // foif vor
+// define when the clock change to next hour 'foif vor halbi nüni '
+var changeToNextHour = "25";
 
-// define change to next hour
-var changeNextHrs = "25"
+var staticWords = [
+	[23, 24], // äs
+	[18, 21] // isch
+];
 
-// TBD not working
-// need find a way to feed all leds to array now there one the begin and there end
-// take from associative array and push full list of led to new associative array with same name
 
-// build minute segments led list
-var minuteSegmentsLeds = [];
-for (i = 0; i < minuteSegments.length; i++)
-{
+var hourWords = [
+  [118, 120], // eis
+  [73, 76], // zwei
+  [77, 80], // drüh
+  [92, 96], // vieri
+  [55, 59], // foifi
+  [97, 102], // sächsi
+  [85, 90], // siebni
+  [103, 107], // achti
+  [114, 117], // nüni
+  [109, 113], // zähni
+  [81, 84], // elfi
+  [121, 126] //zwölfi
+];
 
- 
-}
+var miscWords = [
+  [13, 16], // foif
+  [25, 27], // zäh
+  [28, 34], // viertel
+  [43, 48], // zwänzg
+  [49, 53], // halbi
+  [37, 39], // vor
+  [40, 41] // ab
+];
 
-// single pixels 
-var minuteLeds = [133,134,135,136];
-	
-	
-var now = new time.Date();
+var minuteSentences = {
+  '0':[]
+  '5': [0, 6], 
+  '10': [1, 6],
+  '15': [2, 6],
+  '20': [3, 6],
+  '25': [0, 4, 5],
+  '30': [4],
+  '35': [0, 4, 6],
+  '40': [3, 5],
+  '45': [2, 5],
+  '50': [1, 5],
+  '55': [0, 5]
+};
 
+var minutePixels = getSentencesPixels(minuteSentences, miscWords);
+var staticPixels = getWordsPixels(staticWords);
+var hourPixels = getWordsPixels(hourWords);
+var singlePixels = [133,134,135,136];
 
 ws281x.init(NUM_LEDS);
 
-parseTime(getTime());
+
+// start
+main();
 var loop = setInterval(function(){
-  parseTime(getTime());
+  main();
 }, 20000)
 
+function main() {
+	showClock(minutePixels,staticPixels,hourPixels,singlePixels);
+}
 
-function parseTime(time) {
-  // Because we're calling currentTime and it returns an array of hour/minute - it is expected that parseTime will receive an array.
-  // [hour, minute]
-  var hour = time[0]
-  var minute = time[1]
+function showClock(minutePixels,staticPixels,hourPixels,singlePixels) {
+	// Get time
+	var time = new Date();  
+	var hour = time.getHours();
+	var minute = time.getMinutes();
+	var minuteExact = minute; 
+	//console.log(hour+':'+minute);
+  
+	// change to next our if needed 
+	if (minute > changeToNextHour) {
+		hour++;
+	}
+	
+	// correct 'foif ab null'
+	if(hour == 0) {
+		hour = 12;
+	}
+  	
+	// start build the pixel array
+	pixels = new Array;
+	
+	 // Turn on static words
+	if(hour > 12) {
+		hour = hour - 12;
+	}
 
-  var currentWords = []
-
-  // Turn on 'IT IS'
-  currentWords.push(staticLeds[0], staticLeds[1])
-
-  // Find out if we need to display to the hour, past the hour, or O'Clock.
-  if (minute == 0) {
-	  // nop
-  } else if (minute <= 20) { 
-    currentWords.push(modLeds[1])
-  } else if (minute > 35) {
-    currentWords.push(modLeds[0])
-    // We're now 'to' the hour, so increment the hour
-    hour++
-  }
-
-  // Must be a better way to do this than persistent if-elses.
-  // Correspond minute to appropriate word
-  if (minute == 5 || minute == 55) {
-    currentWords.push(5minLeds[0])
-  } else if (minute == 10 || minute == 50) {
-    currentWords.push(5minLeds[1])
-  } else if (minute == 15 || minute == 45) {
-    currentWords.push(5minLeds[2])
-  } else if (minute == 20 || minute == 40) {
-    currentWords.push(5minLeds[3])
-  } else if (minute == 25 || minute == 35) {
-    currentWords.push(5minLeds[3], 5minLeds[0])
-  } else if (minute == 30) {
-    currentWords.push(5minLeds[4])
-  }
-
-  // We need to parse the hour too. Tedious.
-  if (hour == 0 || hour == 12 || hour == 24) { // Hour '24' so that we display 'TWELVE' after 23:30
-      currentWords.push(hoursLeds[11])
-  } else if (hour == 1 || hour == 13) {
-      currentWords.push(hoursLeds[0])
-  } else if (hour == 2 || hour == 14) {
-      currentWords.push(hoursLeds[1])
-  } else if (hour == 3 || hour == 15) {
-      currentWords.push(hoursLeds[2])
-  } else if (hour == 4 || hour == 16) {
-      currentWords.push(hoursLeds[3])
-  } else if (hour == 5 || hour == 17) {
-      currentWords.push(hoursLeds[4])
-  } else if (hour == 6 || hour == 18) {
-      currentWords.push(hoursLeds[5])
-  } else if (hour == 7 || hour == 19) {
-      currentWords.push(hoursLeds[6])
-  } else if (hour == 8 || hour == 20) {
-      currentWords.push(hoursLeds[7])
-  } else if (hour == 9 || hour == 21) {
-      currentWords.push(hoursLeds[8])
-  } else if (hour == 10 || hour == 22) {
-      currentWords.push(hoursLeds[9])
-  } else if (hour == 11 || hour == 23) {
-      currentWords.push(hoursLeds[10])
-  }
-
+	// floor to five minutes
+	if(minute % 5 != 0) {
+		while(minute % 5 != 0) {
+			minute--;
+		}
+	}    
+	 
+   
+	//console.log(hour+':'+minute);
+   
+   
+	for (i = 0; i < staticPixels.length; i++) {
+		pixels.push(...staticPixels[i]);
+	}	
+	if(minute != 0) {
+		pixels.push(...minutePixels[minute]);
+	}
+	pixels.push(...hourPixels[1-1]);
+  
+		
+	// TBD find diff netween rounded and exact minutes
+	
+	
   // Let's turn the leds on
   turnOnLeds(currentWords)
 }
@@ -154,37 +153,64 @@ function turnOnLeds(words) {
 
 }
 
-function getTime() {
-  // Get the current time.
-  var currentTime = new Date()
-  //console.log(currentTime)
-  var hour = currentTime.getHours()
-  var minute = currentTime.getMinutes()
-
-  //console.log("Time in hours: " + hour + ". Time in minutes: " + minute + ".")
-
-  // Round to the nearest five minutes.
-  var coeff = 1000 * 60 * 5; // Five minutes in ms
-  var rounded = new Date(Math.round(currentTime.getTime() / coeff) * coeff) // Magic
-
-  //console.log("Current hours: " + rounded.getHours() + ". Current minutes: " + rounded.getMinutes())
-
-  return [rounded.getHours(), rounded.getMinutes()]
-
-}
-
 // This is taken from the rainbow.js example in rpi-ws281x-native
 function rgb2Int(r, g, b) {
   return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
 }
-  
 
-function getRndColor() {
-    var r = 255*Math.random()|0,
-        g = 255*Math.random()|0,
-        b = 255*Math.random()|0;
-    return 'rgb(' + r + ',' + g + ',' + b + ')';
+
+function getSentencesPixels(sentences,words) {
+	var pixels = new Object;
+	for (i in sentences) {
+		var sentence = sentences[i];
+		for (y = 0; y < sentence.length; y++) {
+			var key = sentence[y];
+			var word = words[key];
+			var wordPixels = getPixels(word);
+			
+			if (pixels[i] == undefined) {
+			pixels[i] = wordPixels;
+			} else {
+				pixels[i].push(...wordPixels);
+			}
+		}
+	}
+  //console.log(pixels);
+  return pixels;
 }
+
+function getWordsPixels(words) {
+	var pixels = new Array;
+  for (i = 0; i < words.length; i++) {
+		var wordPixels = getPixels(words[i]);
+    	if (pixels[i] == undefined) {
+				pixels[i] = wordPixels;
+			} else {
+				pixels[i].push(...wordPixels);
+			}
+	}
+  //console.log(pixels);
+  return pixels;
+}
+
+function getPixels(word) {
+	var firstPixel = word[0];
+	var lastPixel = word[1];
+  var pixels = new Array;
+	var x = 0;
+	for (var q = firstPixel; q <= lastPixel; q++) {
+		pixels[x] = q;
+		x++;
+	}
+	return pixels;
+}
+
+// function getRndColor() {
+    // var r = 255*Math.random()|0,
+        // g = 255*Math.random()|0,
+        // b = 255*Math.random()|0;
+    // return 'rgb(' + r + ',' + g + ',' + b + ')';
+// }
 
 // ---- trap the SIGINT and reset before exit
 process.on('SIGINT', function () {
