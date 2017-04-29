@@ -21,4 +21,4 @@ https://github.com/Kaph/piwordclock/blob/master/wordclock.js
 https://jsfiddle.net/udorytzz/17/
 https://jsfiddle.net/dmg8sd48/28/
 
-https://jsfiddle.net/zbkyhvr8/6/
+https://jsfiddle.net/zbkyhvr8/14/
