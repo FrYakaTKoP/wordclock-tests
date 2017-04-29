@@ -18,5 +18,7 @@ https://github.com/beyondscreen/node-openpixelcontrol
 https://github.com/Kaph/piwordclock/blob/master/wordclock.js
 
 
-https://jsfiddle.net/udorytzz/13/
-https://jsfiddle.net/dmg8sd48/15/
+https://jsfiddle.net/udorytzz/17/
+https://jsfiddle.net/dmg8sd48/28/
+
+https://jsfiddle.net/zbkyhvr8/6/
