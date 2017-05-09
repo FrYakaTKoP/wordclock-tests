@@ -4,12 +4,20 @@
  * API function for direct clock access via HTTP 
  */
 module.exports = (ctx, http) => {
-    // check action
-    if (!http.data.action || !ctx.clock[http.data.action])
+    // TODO: add request verification and user authentication
+    //
+
+    // get clock api
+    let action = http.data.action;
+    let clockApi = ctx.clock[action];
+
+    // check api
+    if (!clockApi)
         throw { status: 500, message: 'action not found' };
+
     // execute action on clock and send response
     http.reply({
-        'action': http.data.action,
-        'payload': ctx.clock[http.data.action](http.data)
+        'action': action,
+        'payload': clockApi(http.data)
     });
 };
