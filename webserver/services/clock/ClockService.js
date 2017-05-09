@@ -1,15 +1,9 @@
 'use strict';
 
-let clockApi = (ctx, http) => {
-    if(!http.data.action || !ctx.clock[http.data.action]) http.reply({ error: 'action not found'});
-    http.reply({
-        'action': http.data.action,
-        'payload': ctx.clock[http.data.action](http.data)
-    });
-};
+let api = require(process.cwd() + '/api/http');
 
 module.exports = {
     resource: '/api',
-    GET: clockApi.bind(this),
-    POST: clockApi.bind(this)
+    GET: api.bind(this),
+    POST: api.bind(this)
 };
