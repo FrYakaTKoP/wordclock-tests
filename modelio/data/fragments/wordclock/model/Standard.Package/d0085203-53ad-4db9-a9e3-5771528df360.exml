@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Docker" version="4">
+  <OBJECT>
+    <ID name="Docker" mc="Standard.Package" uid="d0085203-53ad-4db9-a9e3-5771528df360"/>
+    <PID name="OS" mc="Standard.Package" uid="020d555e-20ce-4eb0-b124-757c4c24d4f8"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Docker]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Web Container" mc="Standard.Package" uid="bcbdbbcf-359d-47ae-a927-b80f4abc3e70"/>
+        <COMPID name="WIFI AP Container" mc="Standard.Package" uid="111c40b2-727f-4542-8c5d-65775c3fd7f8"/>
+        <COMPID name="WordClock Core Container" mc="Standard.Package" uid="573315b9-bbba-4a63-9145-005d78a070ec"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Web Layer" version="4">
+  <OBJECT>
+    <ID name="Web Layer" mc="Standard.Package" uid="2fe991f7-d4c6-4f2f-a3b8-6e46129a38a5"/>
+    <PID name="Web Container" mc="Standard.Package" uid="bcbdbbcf-359d-47ae-a927-b80f4abc3e70"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Web Layer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="OPC REST Service" mc="Standard.Node" uid="570f05d7-dd92-4f52-9578-a07d36d9f4d6"/>
+        <COMPID name="Content / Web Interface" mc="Standard.Node" uid="9186f3b5-44ba-4b48-84e8-65d23ed2e555"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

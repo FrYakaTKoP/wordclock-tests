@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Communication Interaction Communication diagram" version="4">
+  <OBJECT>
+    <ID name="Communication Interaction Communication diagram" mc="Standard.CommunicationDiagram" uid="a104889d-9794-4bd2-bf7d-36a243d692ab"/>
+    <PID name="Communication Interaction" mc="Standard.CommunicationInteraction" uid="1a64391a-70b5-4061-9598-a0fceb6b23d9"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">133</ATT>
+      <ATT name="UiData"><![CDATA[eJztWltTozAU/isM7yBJUy5jV0et6zpbL+NeZvbJCSRUNBAnpNv232/oRW2rlSpQXHnoDJOQk3OS7yTn+2hnfxQz7S8VacSTLzowLV3b3+tc+Lc0kFpEVJOuyfE9/aJz0TdjTiiLuEki3Bc4NimJJBdmwON4kEQBlsqKSRmNaSLTxeb5kJP46Glzd9qsazG+5eL6wRNL3+tcCn5PhRxrCY6VAwyP+UB2scSq7zdmAzrzLBkwpu/sdXbmA1aG/pBjRvWFuOC6uNLs/SwAQc3p2Bz+HeE0wISS+WTHI3lFw5yznCsTs5EaHcmuf6p8nDxmD4SGeMDkUpA703DWBS4ow5IS5cfSmp1lTdrfrCVbHpwQLIj53NZoGFjIdT1ieI6HDOQTaPihQ4yWjSFqEduD2F+//Ayn8nvCh0kP+5QtefJDiijp63sLc2uniaQCB5PnxZ7Z6nV2JkbWBs8ZPU3U6HueRtnYF2bOYeroJmJE0MxCL0rlApJaBWVIooYup8e5alvBHtggN66UlzjpZ7CabTa0rF0I1Q+B3ba1cd6g0vMmS5pphlYK92ypNRu2LN9BnuG7yDKQR4iBYQgM4LghhMRuodAtAOuTuc44GTBaHxy3S8bxpYhiLMbPQnqT434V0tbum+Fs54WzMjUavxvTqMH0Zpg+w9Ekindi2ykZ29+o2m1RfRXjVgtfu4Fv4UdyesOH11GwYuKQqzlw8rBEIWYpXR/oxNQdHQ+5IAVYkzi4u05VHUb5K9akGORxjT2z/jlMPaJsmtfPdT3JCa/kXP+qAF1AvmcVbj+zMQt8+Wp4PfmB1Vxetc5+Ve/0qZZtjHYzAcwnOQ7y+lbNeQCKkjAqImgt19pFiqCBlv2WihaUr2xsk6EBCj3qQmwExPENBDzXcIkbGBYILduFTpuCVuFqRM4KtCKiBspWHMplam/FdW7loZjbDjTo3iplA2XrEdvibKBizQFso277H4D8Saq1WpE3ULZSUx/2VrF209xnDYv7yCyubFmnXp/ZYG5t52OyuDYJbQCQQYBnG8jxbcO3gWUgTG0nRIA47bCAc2GYQheM6sPcYNlSRC2/scHcikQxNx1cdrFBdOlsDZatSWyLrcGKZQfYHMcNQ6szQ4Nl6zK1YWiwYqGmubcaVvYRWNlq15IDvSi5Sx+qhFdfP+x3BR6qXe3hsUrYxRxcrwfNDxYyNZCaLDOhTpUFi9UUDZuNqsc/c6Nl8M7Tq3ti9g7+HF9dHx4cfT+5uvh13n1LhbgORS9aebp3jzB6Coq10lkDitJB8fPismg0vNj1DyECGZc=]]></ATT>
+      <ATT name="Name"><![CDATA[Communication Interaction Communication diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <REFOBJ>
+          <ID name="Node Module" mc="Standard.CommunicationNode" uid="6230b749-b840-49dd-a2f1-178f22d634f8"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="Communication Node" mc="Standard.CommunicationNode" uid="1e29e82a-cd7b-4198-8d8c-01f068275e13"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="ws281x" mc="Standard.CommunicationNode" uid="15df6114-d196-47b6-b610-4ae67f41d75f"/>
+        </REFOBJ>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="cc3266ca-940f-4dee-a8d2-3fab5079951d"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

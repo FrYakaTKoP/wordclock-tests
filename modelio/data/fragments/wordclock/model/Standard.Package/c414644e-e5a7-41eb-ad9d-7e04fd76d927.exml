@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="wordclock" version="4">
+  <OBJECT>
+    <ID name="wordclock" mc="Standard.Package" uid="c414644e-e5a7-41eb-ad9d-7e04fd76d927"/>
+    <PID name="wordclock" mc="Standard.Project" uid="2e1e185f-a708-48cf-811b-2fd4899045b7"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[wordclock]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Communication Interaction" mc="Standard.CommunicationInteraction" uid="1a64391a-70b5-4061-9598-a0fceb6b23d9"/>
+      </COMP>
+      <COMP relation="OwnedInformationFlow">
+        <OBJECT>
+          <ID name="call clock function" mc="Standard.InformationFlow" uid="97f90576-af53-4150-9562-fb42aab86ea7"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[call clock function]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="Frontend" mc="Standard.Node" uid="706b2970-9055-4388-be90-4b8a28ffae33"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="Service Layer" mc="Standard.Node" uid="423ebe3c-84c2-469a-97f1-1565b64180b7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="execute " mc="Standard.InformationFlow" uid="0c95b12e-cdb0-48a7-89ef-e33b63e451c2"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[execute ]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="ws281x node module" mc="Standard.Node" uid="bb06b880-68c6-46f1-92a8-730b24ef1af1"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="Clock" mc="Standard.Package" uid="671d4e83-8fe6-416e-8515-6c560424c9bb"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="WebServer" mc="Standard.Package" uid="af0d82c0-57f7-4051-b13b-0366e848d798"/>
+        <COMPID name="Browser" mc="Standard.Package" uid="3010fade-c622-4f80-857c-011f6cb71c15"/>
+        <COMPID name="Clock" mc="Standard.Package" uid="671d4e83-8fe6-416e-8515-6c560424c9bb"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="wordclock Deployment diagram" mc="Standard.DeploymentDiagram" uid="db413e7c-a656-4d7c-86a7-53a8d00d367d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

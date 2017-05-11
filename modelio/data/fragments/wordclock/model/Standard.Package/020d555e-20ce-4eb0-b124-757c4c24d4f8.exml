@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="OS" version="4">
+  <OBJECT>
+    <ID name="OS" mc="Standard.Package" uid="020d555e-20ce-4eb0-b124-757c4c24d4f8"/>
+    <PID name="overall" mc="Standard.Package" uid="6ab04d05-f5f6-48c5-871b-c5627c47479a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[OS]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Docker" mc="Standard.Package" uid="d0085203-53ad-4db9-a9e3-5771528df360"/>
+        <COMPID name="Driver" mc="Standard.Package" uid="f8b40fa0-4c49-49d8-9c08-4942b387c4f4"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

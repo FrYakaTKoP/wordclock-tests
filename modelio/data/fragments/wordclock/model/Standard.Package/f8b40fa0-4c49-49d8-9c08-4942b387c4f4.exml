@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Driver" version="4">
+  <OBJECT>
+    <ID name="Driver" mc="Standard.Package" uid="f8b40fa0-4c49-49d8-9c08-4942b387c4f4"/>
+    <PID name="OS" mc="Standard.Package" uid="020d555e-20ce-4eb0-b124-757c4c24d4f8"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Driver]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="ws281x" mc="Standard.Node" uid="43cbd5ab-2caa-4975-ac9b-faec48ea2c64"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="WordClock Core Container" version="4">
+  <OBJECT>
+    <ID name="WordClock Core Container" mc="Standard.Package" uid="573315b9-bbba-4a63-9145-005d78a070ec"/>
+    <PID name="Docker" mc="Standard.Package" uid="d0085203-53ad-4db9-a9e3-5771528df360"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[WordClock Core Container]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="WordClock Deamon" mc="Standard.Node" uid="f701dc12-29d8-4eeb-971f-e61bc15b3278"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

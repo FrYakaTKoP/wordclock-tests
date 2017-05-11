@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="WebServer" version="4">
+  <OBJECT>
+    <ID name="WebServer" mc="Standard.Package" uid="af0d82c0-57f7-4051-b13b-0366e848d798"/>
+    <PID name="wordclock" mc="Standard.Package" uid="c414644e-e5a7-41eb-ad9d-7e04fd76d927"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[WebServer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="ws281x node module" mc="Standard.Node" uid="bb06b880-68c6-46f1-92a8-730b24ef1af1"/>
+        <COMPID name="Service Layer" mc="Standard.Node" uid="423ebe3c-84c2-469a-97f1-1565b64180b7"/>
+        <COMPID name="Clock Functions" mc="Standard.Node" uid="8cb94c05-e887-4fa6-a851-2bf7a08fdb1d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="overall" version="4">
+  <OBJECT>
+    <ID name="overall" mc="Standard.Package" uid="6ab04d05-f5f6-48c5-871b-c5627c47479a"/>
+    <PID name="architecture" mc="Standard.Package" uid="2332ad24-2ff6-4644-903a-c4748f75d965"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[overall]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedInformationFlow">
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="fb0d5e37-9ceb-4165-8468-6a81fab68b28"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationTarget">
+              <ID name="OPC Controller" mc="Standard.Node" uid="f52fadc4-a632-4c64-93f5-46feb283544e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="OS" mc="Standard.Package" uid="020d555e-20ce-4eb0-b124-757c4c24d4f8"/>
+        <COMPID name="Hardware" mc="Standard.Package" uid="c6cdc8d1-40cb-4e3d-b911-c2e94d415101"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overall Deployment diagram" mc="Standard.DeploymentDiagram" uid="e521738f-a6d7-4c7a-af4b-233640d8ddb3"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

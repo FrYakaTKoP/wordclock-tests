@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Browser" version="4">
+  <OBJECT>
+    <ID name="Browser" mc="Standard.Package" uid="3010fade-c622-4f80-857c-011f6cb71c15"/>
+    <PID name="wordclock" mc="Standard.Package" uid="c414644e-e5a7-41eb-ad9d-7e04fd76d927"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Browser]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Frontend" mc="Standard.Node" uid="706b2970-9055-4388-be90-4b8a28ffae33"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

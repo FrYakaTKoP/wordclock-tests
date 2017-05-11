@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="OPC Module" version="4">
+  <OBJECT>
+    <ID name="OPC Module" mc="Standard.Package" uid="269d45b9-4322-49dd-83f1-38330eeff0e4"/>
+    <PID name="Application Layer" mc="Standard.Package" uid="2a5b4dfd-70db-4473-bc14-1a3f5f9c8bdd"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[OPC Module]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="OPC Controller" mc="Standard.Node" uid="f52fadc4-a632-4c64-93f5-46feb283544e"/>
+        <COMPID name="OPC Client" mc="Standard.Node" uid="e0f2c8b9-1a7f-4750-8380-5a3c8a9b9cca"/>
+        <COMPID name="OPC Server" mc="Standard.Node" uid="8992dc00-7e31-4f35-bb53-948988bd0446"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
