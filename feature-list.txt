@@ -6,12 +6,13 @@ Wordclock conceptional feature list:
 		- display temperatures
 			- small Dallas oneWire sensor for indoor temp
 			- use inet weather service for Outdoor temp
-			- may use RF interface to gather outdoor temp measured by RF sensors (433 or 868)
 		- display scrollingtext
 			- display time and date 
 			- webif print message 
 			- rss? or similar 
-		- ?minigame? =) (but would need kind of control interface ~ps3 bt / usb nes / hw btns)
+		- minigame(s) =)
+			- usb snes pad(s)
+				
 		
 	Web Frontend Features:
 		- time	
@@ -37,7 +38,7 @@ Wordclock conceptional feature list:
 		- hw buttons
 			- reset / activate unprotected AP
 			- quick select profiles
-			- ?minigame hw buttons?
+			- use arcade kind  buttons (mini?)
 		- battery backed RTC (in case inet is down or not available on boot, will reset to 1970 otherwise)
 		- light sensor for automatic dimming?
 		
