@@ -25,3 +25,8 @@ https://jsfiddle.net/zbkyhvr8/14/
 
 // updated matrix /w lorem ipsum minuteAccuracy proof of concept:
 https://jsfiddle.net/zbkyhvr8/22/
+
+
+/// todo check if they work together:
+https://www.npmjs.com/package/ds18x20
+https://github.com/i-am-digital/js-gpiozero
