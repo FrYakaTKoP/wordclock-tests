@@ -1,0 +1,10 @@
+	
+	3.3V					Pin1
+	5V					Pin2/4
+	GND					Pin6
+	#4  	GPIO04	Pin7				  	ds18b20		DS18x10
+	#18 	GPIO18	Pin12				ws2812b		rpi-ws281x-native
+	#2 	GPIO02	Pin3		SDA1	ds1307			hwclock	
+	#3 	GPIO03	Pin5		SCL1	ds1307			hwclock
+	#x	GPIO0x		Pinx		input		profileBtn	rpio
+	
