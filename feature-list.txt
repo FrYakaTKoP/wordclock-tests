@@ -6,34 +6,35 @@ Wordclock conceptional feature list:
 		- display temperatures
 			- small Dallas oneWire sensor for indoor temp
 			- use inet weather service for Outdoor temp
-		- display scrollingtext
-			- display time and date 
-			- webif print message 
+		- display scrolling text
+			- display time and date
 			- rss? or similar 
+		- web controlled display
 		- minigame(s) =)
 			- usb snes pad(s)
-				
-		
+						
 	Web Frontend Features:
-		- time	
-			- set clock manually
-			- regional settings (tz/dst)
-			- change how the (system)time gets synched (need to investigate more) 
 		- Display
+			- web controlled mode 
+				- show scrolling text
+				- render pics (gifs?)
+				- free draw
 			- change led color + brightness
 				- change color of every segment/element
 				- random option
 				- color wheel?
-			- display profiles
+			- display profiles 
 				- en-/disable
 				- order
+				- disable 'playback'
 				- profile time
 				- profile config
 				
 	Misc Features:
-		- hw buttons
+		- HW buttons
 			- quick select profiles
 			- use arcade kind  buttons (mini?)
+		- USB Hub for SNES pads
 		- battery backed RTC (in case inet is down or not available on boot, will reset to 1970 otherwise)
 
 		
