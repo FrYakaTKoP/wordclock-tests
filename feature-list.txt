@@ -19,10 +19,6 @@ Wordclock conceptional feature list:
 			- set clock manually
 			- regional settings (tz/dst)
 			- change how the (system)time gets synched (need to investigate more) 
-		- Wifi
-			- join existing network 
-			- config AP if standalone (security, since first boot ap will not have any)
-			- misc network config 
 		- Display
 			- change led color + brightness
 				- change color of every segment/element
@@ -36,9 +32,8 @@ Wordclock conceptional feature list:
 				
 	Misc Features:
 		- hw buttons
-			- reset / activate unprotected AP
 			- quick select profiles
 			- use arcade kind  buttons (mini?)
 		- battery backed RTC (in case inet is down or not available on boot, will reset to 1970 otherwise)
-		- light sensor for automatic dimming?
+
 		
