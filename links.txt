@@ -1,8 +1,5 @@
 https://learn.adafruit.com/neopixels-on-raspberry-pi/wiring
 
-https://joshondesign.com/2013/10/23/noderpi
-
-
 https://www.npmjs.com/package/rpi-ws281x-native
 https://www.npmjs.com/package/rpi-ws281x-canvas
 https://github.com/Automattic/node-canvas
@@ -15,9 +12,6 @@ https://github.com/zapty/forever-service
 
 https://github.com/beyondscreen/node-openpixelcontrol
 
-https://github.com/Kaph/piwordclock/blob/master/wordclock.js
-
-
 https://jsfiddle.net/udorytzz/17/
 https://jsfiddle.net/dmg8sd48/28/
 
@@ -27,6 +21,13 @@ https://jsfiddle.net/zbkyhvr8/14/
 https://jsfiddle.net/zbkyhvr8/22/
 
 
-/// todo check if they work together:
 https://www.npmjs.com/package/ds18x20
-https://github.com/i-am-digital/js-gpiozero
+
+sudo nano /boot/config.txt and then scrolling to the bottom and typing it there
+Copy Code
+    dtoverlay=w1-gpio
+
+sudo modprobe w1-gpio && sudo modprobe w1-therm
+
+https://www.npmjs.com/package/rpi-gpio
+
